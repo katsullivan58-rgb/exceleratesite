@@ -24,8 +24,9 @@ export function Navbar() {
           <NavLink href="/" label="Home" />
           <NavLink href="/about" label="About" />
           <NavLink href="/services" label="Services" />
+          <NavLink href="/liveexample" label="Live Example" />
           <a
-            href="mailto:you@example.com"
+            href="mailto:exceleratekas@gmail.com"
             className="ml-2 rounded-xl bg-black px-4 py-2 text-sm font-medium text-white hover:opacity-90"
           >
             Contact
