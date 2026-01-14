@@ -125,9 +125,9 @@ export default function About() {
               Email me at{" "}
               <a
                 className="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:decoration-emerald-500"
-                href="mailto:you@example.com"
+                href="mailto:exceleratekas@gmail.com"
               >
-                you@example.com
+                exceleratekas@gmail.com
               </a>{" "}
               and tell me what you need.
             </p>

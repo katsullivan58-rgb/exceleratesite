@@ -68,7 +68,7 @@ export default function HomePage() {
               </Link>
 
               <a
-                href="mailto:you@example.com?subject=Excelerate%20Consult%20Request"
+                href="mailto:exceleratekas@gmail.com?subject=Excelerate%20Consult%20Request"
                 className="rounded-xl border border-emerald-200 bg-white px-5 py-3 text-sm font-medium text-emerald-900 hover:bg-emerald-50 active:scale-[0.99]"
               >
                 Book a quick consult
@@ -88,9 +88,7 @@ export default function HomePage() {
               <Stat value="One link" label="projects + proof" />
             </motion.div>
 
-            <motion.p variants={fadeUp} className="mt-6 text-sm text-gray-500">
-              *Not a magic wand. But honestly? Very close.
-            </motion.p>
+          
           </div>
 
           {/* right “preview” */}
@@ -222,7 +220,7 @@ export default function HomePage() {
                 View pricing
               </Link>
               <a
-                href="mailto:you@example.com?subject=Excelerate%20Launch%20Client"
+                href="mailto:exceleratekas@gmail.com?subject=Excelerate%20Launch%20Client"
                 className="rounded-xl border border-emerald-200 bg-white px-5 py-3 text-sm font-medium text-emerald-900 hover:bg-emerald-50"
               >
                 Email to book

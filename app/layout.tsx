@@ -2,7 +2,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 
 export const metadata = {
-  title: "Excelerate | Websites that ship fast",
+  title: "Excelerate",
   description: "Excelerate builds clean, fast websites for small businesses and professionals.",
 };
 
@@ -22,8 +22,8 @@ export default function RootLayout({
               <p>© {new Date().getFullYear()} Excelerate. All rights reserved.</p>
               <p>
                 Built with Next.js •{" "}
-                <a className="underline" href="mailto:you@example.com">
-                  you@example.com
+                <a className="underline" href="mailto:exceleratekas@gmail.com">
+                  exceleratekas@gmail.com
                 </a>
               </p>
             </div>

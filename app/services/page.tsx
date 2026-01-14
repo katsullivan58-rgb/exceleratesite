@@ -15,9 +15,7 @@ export default function Services() {
       </h1>
 
       <p className="mt-5 max-w-3xl text-lg text-gray-600">
-        The job market is brutal. Your resume can’t carry everything, so your website has to.
-        Excelerate builds clean, modern personal sites where your projects and impact are easy to see —
-        in one link.
+        Fill in that pesky 'link' section of job applications with a custom built site that shows your accomplishments!
       </p>
 
       <div className="mt-10 flex flex-wrap gap-3">
@@ -44,9 +42,9 @@ export default function Services() {
           popular
           features={[
             "3 pages: Landing + About + Projects",
-            "Mobile-first, recruiter-friendly layout",
+            "Recruiter-friendly layout",
             "Deployed live on Vercel",
-            "Light copy cleanup + structure",
+            "Cleanup + structure",
             "1 revision round included",
             "Typical turnaround: 3–5 days",
           ]}
@@ -60,7 +58,7 @@ export default function Services() {
             "3 pages: Landing + About + Projects",
             "Project sections with links + screenshots",
             "Fast, clean design (no template look)",
-            "Basic SEO + shareable link",
+            "Shareable link",
             "1 revision round included",
             "Typical turnaround: 3–5 days",
           ]}
@@ -69,13 +67,13 @@ export default function Services() {
         <PricingCard
           title="Student+"
           price="250"
-          description="For students who want extra polish and an extra page."
+          description="For students who want an extra page."
           features={[
             "Everything in Student Portfolio",
-            "1 extra page (Writing / Resume / Leadership / Case Study)",
-            "More animations + visual polish",
+            "Additional Custom Showcase Page (Case study, leadership, writing, research, etc.)",
+            "Custom LinkedIn post to announce & showcase your site",
             "2 revision rounds included",
-            "Typical turnaround: 4–6 days",
+            "Typical turnaround: 4–6 days"
           ]}
         />
       </div>
@@ -86,7 +84,7 @@ export default function Services() {
 
         <div className="mt-6 grid gap-4 md:grid-cols-2 text-gray-700">
           <div className="rounded-2xl bg-emerald-50 p-6">
-            <h3 className="font-medium text-gray-900">Recruiter-first structure</h3>
+            <h3 className="font-medium text-gray-900">Recruiter-First Structure</h3>
             <p className="mt-2 text-sm text-gray-600">
               Projects, impact, and experience are organized so someone can understand your value in
               under a minute.
@@ -94,24 +92,23 @@ export default function Services() {
           </div>
 
           <div className="rounded-2xl bg-emerald-50 p-6">
-            <h3 className="font-medium text-gray-900">Launch support</h3>
+            <h3 className="font-medium text-gray-900">Launch Support</h3>
             <p className="mt-2 text-sm text-gray-600">
-              I help get it live on Vercel and can help you connect a domain if you want
-              (yourname.com).
+              I help get it live on Vercel with a custom domain.
             </p>
           </div>
 
           <div className="rounded-2xl bg-emerald-50 p-6">
-            <h3 className="font-medium text-gray-900">Easy handoff</h3>
+            <h3 className="font-medium text-gray-900">Easy Handoff</h3>
             <p className="mt-2 text-sm text-gray-600">
               You get the full code + a simple guide for edits, so you can update projects anytime.
             </p>
           </div>
 
           <div className="rounded-2xl bg-emerald-50 p-6">
-            <h3 className="font-medium text-gray-900">Add-ons (optional)</h3>
+            <h3 className="font-medium text-gray-900">Consulting Sessions</h3>
             <p className="mt-2 text-sm text-gray-600">
-              Extra page (+$30), custom domain setup (+$20), blog/case study template (+$50).
+              Inital meetings and revision meetings so I can fully encapsulate your accomplishments and steer your website in way that will be recruiter-friendly.
             </p>
           </div>
         </div>
