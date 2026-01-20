@@ -7,7 +7,7 @@ export default function Services() {
     <main className="mx-auto max-w-6xl px-6 py-20">
       <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs text-emerald-800">
         <span className="h-2 w-2 rounded-full bg-emerald-600" />
-        Dallas (University Park) Launch!!! • Limited time discounted student pricing!
+        Tulane + University Park Launch!!! • Limited time discounted student pricing!
       </div>
 
       <h1 className="mt-6 text-4xl font-semibold tracking-tight">

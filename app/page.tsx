@@ -42,7 +42,7 @@ export default function HomePage() {
           <div>
             <motion.div variants={fadeUp} className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white/70 px-3 py-1 text-xs text-emerald-800 shadow-sm">
               <span className="h-2 w-2 rounded-full bg-emerald-500" />
-              Dallas (University Park) launch • Websites for new grads
+              Tulane + University Park Launch!
             </motion.div>
 
             <motion.h1 variants={fadeUp} className="mt-6 text-4xl font-semibold tracking-tight text-gray-900 sm:text-6xl">
@@ -205,10 +205,10 @@ export default function HomePage() {
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>
               <h2 className="text-2xl font-semibold text-gray-900">
-                University Park launch pricing
+                Tulane + University Park  Launch Pricing
               </h2>
               <p className="mt-2 text-gray-600">
-                Early clients get priority turnaround + a discounted first run. Only 3 spots!
+                Early students get priority turnaround + a discounted first run. Only 3 spots!
               </p>
             </div>
 
