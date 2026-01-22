@@ -1,14 +1,14 @@
 export default function ExamplePage() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      {/* emerald background wash */}
-      <div className="pointer-events-none fixed inset-0 bg-emerald-300/20" />
+      {/* blue background wash */}
+      <div className="pointer-events-none fixed inset-0 bg-blue-300/20" />
 
       <div className="relative mx-auto max-w-6xl px-6 py-16 space-y-16">
 
         {/* Header */}
         <header className="max-w-3xl">
-          <p className="text-xs font-medium tracking-[0.3em] text-emerald-700">
+          <p className="text-xs font-medium tracking-[0.3em] text-blue-700">
             LIVE EXAMPLE
           </p>
 
@@ -28,7 +28,7 @@ export default function ExamplePage() {
           <div className="md:col-span-8">
             <div className="rounded-3xl border border-slate-200 bg-white p-10 shadow-sm">
 
-              <p className="text-xs font-medium tracking-[0.28em] text-emerald-700">
+              <p className="text-xs font-medium tracking-[0.28em] text-blue-700">
                 FEATURED BUILD
               </p>
 
@@ -47,8 +47,8 @@ export default function ExamplePage() {
                   href="https://kasullivan.vercel.app/"
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full bg-emerald-700 px-6 py-3 
-                  text-sm font-semibold text-white transition hover:bg-emerald-700"
+                  className="rounded-full bg-blue-700 px-6 py-3 
+                  text-sm font-semibold text-white transition hover:bg-blue-700"
                 >
                   View live site →
                 </a>
@@ -60,9 +60,9 @@ export default function ExamplePage() {
 
           {/* Side card */}
           <div className="md:col-span-4">
-            <div className="rounded-3xl border border-emerald-500/20 bg-white p-8">
+            <div className="rounded-3xl border border-blue-500/20 bg-white p-8">
 
-              <p className="text-xs font-medium tracking-[0.3em] text-emerald-700">
+              <p className="text-xs font-medium tracking-[0.3em] text-blue-700">
                 COMING SOON
               </p>
 
@@ -71,8 +71,8 @@ export default function ExamplePage() {
                 <li>• Testimonials and outcomes</li>
               </ul>
 
-              <div className="mt-8 rounded-2xl border border-emerald-700 bg-emerald-50 p-5">
-                <p className="text-xs font-medium tracking-widest text-emerald-700">
+              <div className="mt-8 rounded-2xl border border-blue-700 bg-blue-50 p-5">
+                <p className="text-xs font-medium tracking-widest text-blue-700">
                   NOTE
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-slate-600">

@@ -30,9 +30,9 @@ export default function HomePage() {
     <main className="relative min-h-screen bg-white">
       {/* background glow */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute left-1/2 top-[-120px] h-[420px] w-[860px] -translate-x-1/2 rounded-full bg-emerald-200/60 blur-3xl" />
-        <div className="absolute right-[-240px] top-[240px] h-[420px] w-[420px] rounded-full bg-emerald-300/30 blur-3xl" />
-        <div className="absolute left-[-220px] top-[620px] h-[420px] w-[420px] rounded-full bg-emerald-100/70 blur-3xl" />
+        <div className="absolute left-1/2 top-[-120px] h-[420px] w-[860px] -translate-x-1/2 rounded-full bg-primary/30 blur-3xl" />
+        <div className="absolute right-[-240px] top-[240px] h-[420px] w-[420px] rounded-full bg-primaryDark/20 blur-3xl" />
+        <div className="absolute left-[-220px] top-[620px] h-[420px] w-[420px] rounded-full bg-primary/25 blur-3xl" />
       </div>
 
       {/* HERO */}
@@ -40,14 +40,14 @@ export default function HomePage() {
         <motion.div variants={container} initial="hidden" animate="show" className="grid gap-10 lg:grid-cols-2 lg:items-center">
           {/* left */}
           <div>
-            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white/70 px-3 py-1 text-xs text-emerald-800 shadow-sm">
-              <span className="h-2 w-2 rounded-full bg-emerald-500" />
+            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 rounded-full border border-blue-800 bg-white/70 px-3 py-1 text-xs text-blue-800 shadow-sm">
+              <span className="h-2 w-2 rounded-full bg-blue-500" />
               Tulane + University Park Launch!
             </motion.div>
 
             <motion.h1 variants={fadeUp} className="mt-6 text-4xl font-semibold tracking-tight text-gray-900 sm:text-6xl">
               The job market is{" "}
-              <span className="text-emerald-700">brutal</span>.
+              <span className="text-blue-700">brutal</span>
               <br />
               Your website shouldn’t be.
             </motion.h1>
@@ -62,14 +62,14 @@ export default function HomePage() {
             <motion.div variants={fadeUp} className="mt-9 flex flex-wrap gap-3">
               <Link
                 href="/services"
-                className="rounded-xl bg-emerald-700 px-5 py-3 text-sm font-medium text-white shadow-sm hover:bg-emerald-800 active:scale-[0.99]"
+                className="rounded-xl bg-blue-700 px-5 py-3 text-sm font-medium text-white shadow-sm hover:bg-blue-800 active:scale-[0.99]"
               >
                 See packages
               </Link>
 
               <a
                 href="mailto:exceleratekas@gmail.com?subject=Excelerate%20Consult%20Request"
-                className="rounded-xl border border-emerald-200 bg-white px-5 py-3 text-sm font-medium text-emerald-900 hover:bg-emerald-50 active:scale-[0.99]"
+                className="rounded-xl border border-blue-200 bg-white px-5 py-3 text-sm font-medium text-blue-900 hover:bg-blue-50 active:scale-[0.99]"
               >
                 Book a quick consult
               </a>
@@ -93,8 +93,8 @@ export default function HomePage() {
 
           {/* right “preview” */}
           <motion.div variants={fadeIn} className="relative">
-            <div className="rounded-3xl border border-emerald-200 bg-white/75 p-6 shadow-sm backdrop-blur">
-              <div className="rounded-2xl border border-emerald-100 bg-white p-6">
+            <div className="rounded-3xl border border-blue-400 bg-white/75 p-6 shadow-sm backdrop-blur">
+              <div className="rounded-2xl border border-blue-300 bg-white p-6">
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <p className="text-xs uppercase tracking-widest text-gray-500">
@@ -107,7 +107,7 @@ export default function HomePage() {
                       A site that answers: “Can you do the job?” in ~10 seconds.
                     </p>
                   </div>
-                  <div className="rounded-full bg-emerald-100 px-3 py-1 text-xs text-emerald-800">
+                  <div className="rounded-full bg-blue-100 px-3 py-1 text-xs text-blue-800">
                     Live preview
                   </div>
                 </div>
@@ -119,8 +119,8 @@ export default function HomePage() {
                   <MiniRow title="Contact" desc="One-click email + LinkedIn" />
                 </div>
 
-                <div className="mt-6 rounded-2xl bg-emerald-50 p-4">
-                  <p className="text-sm text-emerald-900">
+                <div className="mt-6 rounded-2xl bg-blue-50 p-4">
+                  <p className="text-sm text-blue-900">
                     <span className="font-medium">Built for:</span> Internships,
                     Consulting, Finance, CS, Analytics, Design, Marketing, etc.
                   </p>
@@ -132,7 +132,7 @@ export default function HomePage() {
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -right-2 -top-3 hidden rounded-2xl border border-emerald-200 bg-white px-4 py-3 text-sm text-gray-700 shadow-sm sm:block"
+              className="absolute -right-2 -top-3 hidden rounded-2xl border border-blue-200 bg-white px-4 py-3 text-sm text-gray-700 shadow-sm sm:block"
             >
               “Resume but make it clickable”
             </motion.div>
@@ -140,9 +140,9 @@ export default function HomePage() {
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 5.4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -left-2 bottom-4 hidden rounded-2xl border border-emerald-200 bg-white px-4 py-3 text-sm text-gray-700 shadow-sm sm:block"
+              className="absolute -left-2 bottom-4 hidden rounded-2xl border border-blue-200 bg-white px-4 py-3 text-sm text-gray-700 shadow-sm sm:block"
             >
-              Clean. Fast. <span className="font-medium text-emerald-800">Modern.</span>
+              Clean. Fast. <span className="font-medium text-blue-800">Modern.</span>
             </motion.div>
           </motion.div>
         </motion.div>
@@ -182,11 +182,11 @@ export default function HomePage() {
               <motion.div
                 key={step.title}
                 variants={fadeUp}
-                className="group rounded-2xl border border-emerald-100 bg-white/75 p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+                className="group rounded-2xl border border-blue-100 bg-white/75 p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
               >
                 <h3 className="font-medium text-gray-900">{step.title}</h3>
                 <p className="mt-2 text-sm text-gray-600">{step.desc}</p>
-                <div className="mt-4 h-1 w-10 rounded-full bg-emerald-200 transition group-hover:bg-emerald-400" />
+                <div className="mt-4 h-1 w-10 rounded-full bg-blue-200 transition group-hover:bg-blue-400" />
               </motion.div>
             ))}
           </div>
@@ -200,7 +200,7 @@ export default function HomePage() {
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
           variants={fadeUp}
-          className="rounded-3xl border border-emerald-200 bg-gradient-to-r from-emerald-50 to-white p-8 shadow-sm"
+          className="rounded-3xl border border-blue-200 bg-gradient-to-r from-blue-50 to-white p-8 shadow-sm"
         >
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>
@@ -215,13 +215,13 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/services"
-                className="rounded-xl bg-emerald-700 px-5 py-3 text-sm font-medium text-white hover:bg-emerald-800"
+                className="rounded-xl bg-blue-700 px-5 py-3 text-sm font-medium text-white hover:bg-blue-800"
               >
                 View pricing
               </Link>
               <a
                 href="mailto:exceleratekas@gmail.com?subject=Excelerate%20Launch%20Client"
-                className="rounded-xl border border-emerald-200 bg-white px-5 py-3 text-sm font-medium text-emerald-900 hover:bg-emerald-50"
+                className="rounded-xl border border-blue-200 bg-white px-5 py-3 text-sm font-medium text-blue-900 hover:bg-blue-50"
               >
                 Email to book
               </a>
@@ -235,7 +235,7 @@ export default function HomePage() {
 
 function Stat({ value, label }: { value: string; label: string }) {
   return (
-    <div className="rounded-2xl border border-emerald-100 bg-white/75 p-4 shadow-sm">
+    <div className="rounded-2xl border border-blue-100 bg-white/75 p-4 shadow-sm">
       <div className="text-xl font-semibold text-gray-900">{value}</div>
       <div className="text-sm text-gray-600">{label}</div>
     </div>
@@ -244,12 +244,12 @@ function Stat({ value, label }: { value: string; label: string }) {
 
 function MiniRow({ title, desc }: { title: string; desc: string }) {
   return (
-    <div className="flex items-start justify-between gap-4 rounded-2xl border border-emerald-100 bg-white p-4">
+    <div className="flex items-start justify-between gap-4 rounded-2xl border border-blue-100 bg-white p-4">
       <div>
         <div className="font-medium text-gray-900">{title}</div>
         <div className="mt-1 text-sm text-gray-600">{desc}</div>
       </div>
-      <div className="mt-1 h-2 w-2 rounded-full bg-emerald-500" />
+      <div className="mt-1 h-2 w-2 rounded-full bg-blue-500" />
     </div>
   );
 }

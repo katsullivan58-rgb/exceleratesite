@@ -4,12 +4,12 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <main className="relative overflow-hidden bg-gradient-to-b from-emerald-50 via-white to-white">
+    <main className="relative overflow-hidden bg-gradient-to-b from-blue-50 via-white to-white">
       {/* Soft background glows */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-[-140px] h-[420px] w-[900px] -translate-x-1/2 rounded-full bg-emerald-200/50 blur-3xl" />
-        <div className="absolute right-[-240px] top-[280px] h-[420px] w-[420px] rounded-full bg-emerald-300/20 blur-3xl" />
-        <div className="absolute left-[-220px] top-[820px] h-[420px] w-[420px] rounded-full bg-emerald-100/70 blur-3xl" />
+        <div className="absolute left-1/2 top-[-140px] h-[420px] w-[900px] -translate-x-1/2 rounded-full bg-blue-200/50 blur-3xl" />
+        <div className="absolute right-[-240px] top-[280px] h-[420px] w-[420px] rounded-full bg-blue-300/20 blur-3xl" />
+        <div className="absolute left-[-220px] top-[820px] h-[420px] w-[420px] rounded-full bg-blue-100/70 blur-3xl" />
       </div>
 
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
@@ -18,8 +18,8 @@ export default function About() {
           {/* PHOTO */}
           <div className="relative">
             {/* glow */}
-            <div className="absolute -inset-3 rounded-[2rem] bg-emerald-200/60 blur-2xl" />
-            <div className="relative rounded-[2rem] border border-emerald-100 bg-white/60 p-2 shadow-sm backdrop-blur">
+            <div className="absolute -inset-3 rounded-[2rem] bg-blue-200/60 blur-2xl" />
+            <div className="relative rounded-[2rem] border border-blue-100 bg-white/60 p-2 shadow-sm backdrop-blur">
               <Image
                 src="/kathryn.jpeg"
                 alt="Kathryn Sullivan, founder of Excelerate"
@@ -33,8 +33,8 @@ export default function About() {
 
           {/* TEXT */}
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white/70 px-3 py-1 text-xs font-medium text-emerald-800 shadow-sm">
-              <span className="h-2 w-2 rounded-full bg-emerald-600" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/70 px-3 py-1 text-xs font-medium text-blue-800 shadow-sm">
+              <span className="h-2 w-2 rounded-full bg-blue-600" />
               Founder • University Park • Tulane
             </div>
 
@@ -42,7 +42,7 @@ export default function About() {
               About Me
             </h1>
 
-            <p className="mt-3 text-sm text-emerald-800/80">
+            <p className="mt-3 text-sm text-blue-800/80">
               Building student websites that encapsulate them as a person — not just a template.
             </p>
 
@@ -77,7 +77,7 @@ export default function About() {
                 I’m a Microsoft Excel National Champion (yes, that’s a real thing) and studied computer
                 science abroad at the University of Edinburgh — but more than anything, I’m passionate
                 about helping people{" "}
-                <span className="font-semibold text-emerald-800">
+                <span className="font-semibold text-blue-800">
                   show what they can do
                 </span>
                 , not just list it.
@@ -124,7 +124,7 @@ export default function About() {
             <p>
               Email me at{" "}
               <a
-                className="font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-4 hover:decoration-emerald-500"
+                className="font-medium text-blue-800 underline decoration-blue-300 underline-offset-4 hover:decoration-blue-500"
                 href="mailto:exceleratekas@gmail.com"
               >
                 exceleratekas@gmail.com
@@ -132,7 +132,7 @@ export default function About() {
               and tell me what you need.
             </p>
 
-            <div className="mt-4 rounded-2xl border border-emerald-100 bg-emerald-50 p-4 text-sm text-emerald-900/90">
+            <div className="mt-4 rounded-2xl border border-blue-100 bg-blue-50 p-4 text-sm text-blue-900/90">
               Quick prompt: “I’m a student at ___ applying for ___ roles. Here are my projects:
               ___.”
             </div>
@@ -151,13 +151,13 @@ function InfoCard({
   children: ReactNode;
 }) {
   return (
-    <div className="group relative rounded-3xl border border-emerald-100 bg-white/70 p-6 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:shadow-md">
-      <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-emerald-100/50" />
+    <div className="group relative rounded-3xl border border-blue-100 bg-white/70 p-6 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:shadow-md">
+      <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-blue-100/50" />
       <h2 className="text-lg font-semibold text-gray-900">{title}</h2>
       <div className="mt-3 space-y-3 text-[15px] leading-relaxed text-gray-700">
         {children}
       </div>
-      <div className="mt-5 h-1 w-10 rounded-full bg-emerald-700/80 transition group-hover:w-14" />
+      <div className="mt-5 h-1 w-10 rounded-full bg-blue-700/80 transition group-hover:w-14" />
     </div>
   );
 }
