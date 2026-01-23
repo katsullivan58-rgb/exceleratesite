@@ -38,13 +38,13 @@ export default function Services() {
         <PricingCard
           title="Launch Special"
           price="150"
-          description="First 3 clients only — founders launch pricing."
+          description="A limited-time discounted package for students to get live fast with free resume revision."
           popular
           features={[
             "3 pages: Landing + About + Projects",
             "Recruiter-friendly layout",
             "Deployed live on Vercel",
-            "Cleanup + structure",
+            "Free resume review + suggestions",
             "1 revision round included",
             "Typical turnaround: 3–5 days",
           ]}
