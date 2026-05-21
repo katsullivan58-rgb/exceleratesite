@@ -14,7 +14,7 @@ export function Logo() {
       <div className="leading-tight">
         <div className="text-sm font-semibold">Excelerate</div>
         <div className="text-xs text-gray-500">
-          Get hired. Show your work.
+          Less template. More you.
         </div>
       </div>
     </div>
