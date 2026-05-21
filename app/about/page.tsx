@@ -16,35 +16,39 @@ const fadeUp: Variants = {
 
 const kathrynCredentials = [
   {
-    label: "2025 Lepage Fellow of the Year",
+    label: "2026 Lepage Center Fellow of the Year",
     sub: "Albert Lepage Center for Entrepreneurship & Innovation, Tulane University",
   },
   {
     label: "Microsoft Excel National Champion",
-    sub: "Yes, it's a real thing.",
+    sub: "Louisiana champion; Competeted at Certiport x Microsoft national championship. Yes, it's a real thing and yes there's a documentary.",
   },
   {
-    label: "Finance & Computer Science",
-    sub: "Tulane University, Freeman School of Business",
+    label: "Finance & Computer Science Graduate",
+    sub: "Tulane University, Freeman School of Business, Tulane School of Science and Engineering, Dean's List",
   },
   {
     label: "Studied abroad at University of Edinburgh",
-    sub: "Computer Science",
+    sub: "Informatics (Computer Science) and Astrophysics",
   },
   {
     label: "Internships at CSIS, Griffith Davidson & Institute for Justice",
-    sub: "Washington, D.C.",
+    sub: "Washington, D.C., Dallas",
   },
+  {
+    label: "Incoming Technology Dispute Advisory Consultant",
+    sub: "Forensic Technology, Dallas, TX",
+  }
 ];
 
 const anneCredentials = [
   {
-    label: "Communications & Design, Marketing & PR",
-    sub: "Tulane University — 4.0 GPA, Dean's List",
+    label: "Communications & Design with concentration in Marketing & PR Graduate",
+    sub: "Tulane University, 4.0 GPA, Dean's List",
   },
   {
     label: "Marketing & Communications Intern",
-    sub: "St. Jude Children's Hospital | ALSAC — two award-winning capstone projects adopted company-wide",
+    sub: "St. Jude Children's Hospital | ALSAC: two award-winning capstone projects adopted company-wide",
   },
   {
     label: "Adobe Creative Cloud, Photo & Video Editing",
@@ -56,7 +60,7 @@ const anneCredentials = [
   },
   {
     label: "PR & Marketing Director",
-    sub: "Delta Delta Delta Sorority — managed brand identity across all platforms",
+    sub: "Delta Delta Delta Sorority: managed brand identity across all platforms",
   },
 ];
 
@@ -103,15 +107,15 @@ export default function About() {
             </motion.h1>
 
             <motion.p variants={fadeUp} className="mt-4 text-lg text-gray-600 leading-relaxed">
-              I'm the founder of Excelerate — a web studio building clean, custom sites for startups, small businesses, and professionals. I'm a Tulane grad in Finance and Computer Science, born and raised in University Park, Dallas.
+              I'm the founder of Excelerate, a web studio building clean, custom sites for startups, small businesses, and professionals. I'm a Tulane grad in Finance and Computer Science, born and raised in University Park, Dallas.
             </motion.p>
 
             <motion.p variants={fadeUp} className="mt-4 text-lg text-gray-600 leading-relaxed">
-              Excelerate started from a simple observation: talented people were being undersold by generic templates and one-page resumes. I built this to change that — for students, founders, and businesses alike.
+              Excelerate was born from identifying gaps while I worked at the LePage Center aka the ntrepreneurship incubator at Tulane. I saw that too many startups were either using a template essentially for websites, yes even with AI, or they would have to pay obscene prices for web developers who often were outsourced overseas and gave them nothing close to what they wanted (it happend multiple times and yes it was stressful). As deadlines were tight I coded several startups websites and wanted to help other startups outside of just Tulane have websites at a low cost that actually do what they need to do. I also saw so many students underselling themselves by only having a one-page resumes and vague AI generated LinkedIn posts. I understand jobs validly want to see real work so I used resume portfolios to fill that gap between applicants and employers. 
             </motion.p>
 
             <motion.p variants={fadeUp} className="mt-4 text-lg text-gray-600 leading-relaxed">
-              After graduation I'm heading back to Dallas to start my career in Technology Dispute Advisory consulting — but Excelerate is here to stay.
+              After graduation I'm now back in Dallas to start my career in Technology Dispute Advisory consulting in the fall, but Excelerate is here to stay.
             </motion.p>
 
             <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
@@ -182,15 +186,15 @@ export default function About() {
             </motion.h2>
 
             <motion.p variants={fadeUp} className="mt-4 text-lg text-gray-600 leading-relaxed">
-              Anne Heldman is Excelerate's lead designer — bringing the visual side of every project to life. With a degree in Communications and Design from Tulane and a 4.0 GPA, she combines a sharp creative eye with real strategic thinking about how design communicates.
+              Anne Heldman is Excelerate's lead designer, bringing the visual side of every project to life. With a degree in Communications and Design from Tulane and a 4.0 GPA, she combines a sharp creative eye with real strategic thinking about how design communicates.
             </motion.p>
 
             <motion.p variants={fadeUp} className="mt-4 text-lg text-gray-600 leading-relaxed">
-              Anne handles the aesthetics, layout direction, and visual identity of every site we build. She also offers custom logo and brand design — hand-crafted, not AI-generated, so there are zero intellectual property concerns for your business.
+              Anne handles the aesthetics, layout direction, and visual identity of every site we build. She also offers custom logo and brand design, hand-crafted, not AI-generated, so there are zero intellectual property concerns for your business.
             </motion.p>
 
             <motion.p variants={fadeUp} className="mt-4 text-lg text-gray-600 leading-relaxed">
-              Her background spans marketing at St. Jude Children's Hospital, brand work at BluePrint Art Gallery, and digital design across web, social, and print — so she knows how to make things look great across every platform.
+              Her background spans marketing at St. Jude Children's Hospital, brand work at BluePrint Art Gallery, and digital design across web, social, and print, so she knows how to make things look great across every platform.
             </motion.p>
           </motion.div>
 
@@ -247,7 +251,7 @@ export default function About() {
           <div className="rounded-3xl border border-gray-100 bg-gray-50 p-8">
             <h2 className="text-xl font-semibold text-gray-900">What we build</h2>
             <p className="mt-4 text-base text-gray-600 leading-relaxed">
-              Every site is custom — designed from scratch to fit the client, not pulled from a template library. We work with startups who need a launch presence, small businesses who need to build trust online, and professionals who want a single link that tells their whole story.
+              Every site is custom and designed from scratch to fit the client, not pulled from a template library. We work with startups who need a launch presence, small businesses who need to build trust online, and professionals who want a single link that tells their whole story.
             </p>
             <div className="mt-6 h-1 w-10 rounded-full bg-blue-700" />
           </div>
@@ -255,7 +259,7 @@ export default function About() {
           <div className="rounded-3xl border border-blue-100 bg-blue-50 p-8">
             <h2 className="text-xl font-semibold text-gray-900">Work with us</h2>
             <p className="mt-4 text-base text-gray-600 leading-relaxed">
-              Whether you're a startup needing a launch page, a small business that's been putting off a real website, or a professional who wants to stand out — we'd love to help.
+              Whether you're a startup needing a launch page, a small business that's been putting off a real website, or a professional who wants to stand out, we'd love to help.
             </p>
             <a
               href="mailto:exceleratekas@gmail.com"
