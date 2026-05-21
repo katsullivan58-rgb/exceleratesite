@@ -71,7 +71,8 @@ export default function HomePage() {
           </motion.h1>
 
           <motion.p variants={fadeUp} className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-            Excelerate builds clean, fast, custom websites for startups, small businesses, and professionals — without the agency price tag or the month-long wait.{" "}
+            Excelerate builds clean, fast, custom websites for startups, small businesses, and professionals — without the agency price tag or the month-long wait.
+            <br />
             <span className="font-medium text-gray-900">Simple. Scalable. Built to grow.</span>
           </motion.p>
 
