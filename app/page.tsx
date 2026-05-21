@@ -20,10 +20,32 @@ const fadeUp: Variants = {
   },
 };
 
-const fadeIn: Variants = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
-};
+const services = [
+  { title: "Startup sites", desc: "Launch pages and product sites built to convert visitors into believers." },
+  { title: "Small business", desc: "Local or online — a site that builds trust and gets the phone ringing." },
+  { title: "Personal profiles", desc: "Students and professionals who want to stand out and be found." },
+  { title: "Landing pages", desc: "Single-focus pages for campaigns, launches, or products." },
+  { title: "Portfolios", desc: "Design, dev, writing, consulting — show the work clearly." },
+  { title: "& more", desc: "Have something else in mind? Let's talk it through." },
+];
+
+const steps = [
+  {
+    n: "1",
+    title: "Kickoff",
+    desc: "Quick call to learn what you do, who you're trying to reach, and what success looks like for you.",
+  },
+  {
+    n: "2",
+    title: "Build",
+    desc: "We design, write, and build your site. You get a live preview to review and give feedback.",
+  },
+  {
+    n: "3",
+    title: "Launch",
+    desc: "Final polish, mobile check, and custom domain setup. You're live.",
+  },
+];
 
 export default function HomePage() {
   return (
@@ -36,120 +58,85 @@ export default function HomePage() {
       </div>
 
       {/* HERO */}
-      <section className="mx-auto max-w-6xl px-6 pt-14 pb-10 sm:pt-20">
-        <motion.div variants={container} initial="hidden" animate="show" className="grid gap-10 lg:grid-cols-2 lg:items-center">
-          {/* left */}
-          <div>
-            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 rounded-full border border-blue-800 bg-white/70 px-3 py-1 text-xs text-blue-800 shadow-sm">
-              <span className="h-2 w-2 rounded-full bg-blue-500" />
-              Tulane + University Park Launch!
-            </motion.div>
+      <section className="mx-auto max-w-4xl px-6 pt-14 pb-5 sm:pt-20 text-center">
+        <motion.div variants={container} initial="hidden" animate="show">
+          <motion.div variants={fadeUp} className="inline-flex items-center gap-2 rounded-full border border-blue-800 bg-white/70 px-3 py-1 text-xs text-blue-800 shadow-sm">
+            <span className="h-2 w-2 rounded-full bg-blue-500" />
+            Now open to all clients
+          </motion.div>
 
-            <motion.h1 variants={fadeUp} className="mt-6 text-4xl font-semibold tracking-tight text-gray-900 sm:text-6xl">
-              The job market is{" "}
-              <span className="text-blue-700">brutal</span>
-              <br />
-              Your website shouldn’t be.
-            </motion.h1>
+          <motion.h1 variants={fadeUp} className="mt-6 text-4xl font-semibold tracking-tight text-gray-900 sm:text-6xl">
+            Your business deserves a{" "}
+            <span className="text-blue-700">website that works.</span>
+          </motion.h1>
 
-            <motion.p variants={fadeUp} className="mt-6 text-lg text-gray-600">
-              Resumes are tiny. Cover letters are awkward. Recruiters skim.
-              <br className="hidden sm:block" />
-              Excelerate builds clean, modern personal sites so your work can{" "}
-              <span className="font-medium text-gray-900">actually be seen</span>.
-            </motion.p>
+          <motion.p variants={fadeUp} className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+            Excelerate builds clean, fast, custom websites for startups, small businesses, and professionals — without the agency price tag or the month-long wait.{" "}
+            <span className="font-medium text-gray-900">Simple. Scalable. Built to grow.</span>
+          </motion.p>
 
-            <motion.div variants={fadeUp} className="mt-9 flex flex-wrap gap-3">
-              <Link
-                href="/services"
-                className="rounded-xl bg-blue-700 px-5 py-3 text-sm font-medium text-white shadow-sm hover:bg-blue-800 active:scale-[0.99]"
-              >
-                See packages
-              </Link>
-
-              <a
-                href="mailto:exceleratekas@gmail.com?subject=Excelerate%20Consult%20Request"
-                className="rounded-xl border border-blue-200 bg-white px-5 py-3 text-sm font-medium text-blue-900 hover:bg-blue-50 active:scale-[0.99]"
-              >
-                Book a quick consult
-              </a>
-
-              <a
-                href="#how"
-                className="rounded-xl border border-transparent bg-transparent px-5 py-3 text-sm font-medium text-gray-600 hover:text-gray-900"
-              >
-                How it works →
-              </a>
-            </motion.div>
-
-            <motion.div variants={fadeUp} className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-3">
-              <Stat value="3–5 days" label="typical turnaround" />
-              <Stat value="Recruiter-first" label="layout + copy" />
-              <Stat value="One link" label="projects + proof" />
-            </motion.div>
-
-          
-          </div>
-
-          {/* right “preview” */}
-          <motion.div variants={fadeIn} className="relative">
-            <div className="rounded-3xl border border-blue-400 bg-white/75 p-6 shadow-sm backdrop-blur">
-              <div className="rounded-2xl border border-blue-300 bg-white p-6">
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <p className="text-xs uppercase tracking-widest text-gray-500">
-                      What recruiters actually want
-                    </p>
-                    <h2 className="mt-2 text-2xl font-semibold text-gray-900">
-                      Proof. Fast.
-                    </h2>
-                    <p className="mt-2 text-sm text-gray-600">
-                      A site that answers: “Can you do the job?” in ~10 seconds.
-                    </p>
-                  </div>
-                  <div className="rounded-full bg-blue-100 px-3 py-1 text-xs text-blue-800">
-                    Live preview
-                  </div>
-                </div>
-
-                <div className="mt-6 grid gap-3">
-                  <MiniRow title="Projects" desc="Screenshots + links + what you did" />
-                  <MiniRow title="Experience" desc="Impact bullets (with detail)" />
-                  <MiniRow title="Skills" desc="Tools you actually used" />
-                  <MiniRow title="Contact" desc="One-click email + LinkedIn" />
-                </div>
-
-                <div className="mt-6 rounded-2xl bg-blue-50 p-4">
-                  <p className="text-sm text-blue-900">
-                    <span className="font-medium">Built for:</span> Internships,
-                    Consulting, Finance, CS, Analytics, Design, Marketing, etc.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* floating badges */}
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -right-2 -top-3 hidden rounded-2xl border border-blue-200 bg-white px-4 py-3 text-sm text-gray-700 shadow-sm sm:block"
+          <motion.div variants={fadeUp} className="mt-9 flex flex-wrap justify-center gap-3">
+            <Link
+              href="/services"
+              className="rounded-xl bg-blue-700 px-5 py-3 text-sm font-medium text-white shadow-sm hover:bg-blue-800 active:scale-[0.99]"
             >
-              “Resume but make it clickable”
-            </motion.div>
-
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 5.4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -left-2 bottom-4 hidden rounded-2xl border border-blue-200 bg-white px-4 py-3 text-sm text-gray-700 shadow-sm sm:block"
+              See packages
+            </Link>
+            <a
+              href="mailto:exceleratekas@gmail.com?subject=Excelerate%20Consult%20Request"
+              className="rounded-xl border border-blue-200 bg-white px-5 py-3 text-sm font-medium text-blue-900 hover:bg-blue-50 active:scale-[0.99]"
             >
-              Clean. Fast. <span className="font-medium text-blue-800">Modern.</span>
-            </motion.div>
+              Book a free consult
+            </a>
+            <a
+              href="#what-we-build"
+              className="rounded-xl border border-transparent bg-transparent px-5 py-3 text-sm font-medium text-gray-600 hover:text-gray-900"
+            >
+              How it works →
+            </a>
+          </motion.div>
+
+          <motion.div variants={fadeUp} className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-3 max-w-2xl mx-auto">
+            <Stat value="3–7 days" label="typical turnaround" />
+            <Stat value="Custom" label="design every time" />
+            <Stat value="One link" label="your whole brand" />
           </motion.div>
         </motion.div>
       </section>
 
+      {/* WHAT WE BUILD */}
+      <section id="what-we-build" className="mx-auto max-w-6xl px-2 pt-10 pb-6">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+          variants={container}
+        >
+          <motion.h2 variants={fadeUp} className="text-2xl font-semibold text-gray-900">
+            What we build
+          </motion.h2>
+          <motion.p variants={fadeUp} className="mt-2 text-gray-600">
+            Every site is designed from scratch to fit you — not a template filled in with your name.
+          </motion.p>
+
+          <div className="mt-7 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+            {services.map((s) => (
+              <motion.div
+                key={s.title}
+                variants={fadeUp}
+                className="group rounded-2xl border border-blue-100 bg-white/75 p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <h3 className="font-medium text-gray-900">{s.title}</h3>
+                <p className="mt-2 text-sm text-gray-600">{s.desc}</p>
+                <div className="mt-4 h-1 w-10 rounded-full bg-blue-200 transition group-hover:bg-blue-400" />
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
       {/* HOW IT WORKS */}
-      <section id="how" className="mx-auto max-w-6xl px-6 py-14">
+      <section id="how" className="mx-auto max-w-6xl px-6 pt-4 pb-20 border-t border-blue-50">
         <motion.div
           initial="hidden"
           whileInView="show"
@@ -159,40 +146,27 @@ export default function HomePage() {
           <motion.h2 variants={fadeUp} className="text-2xl font-semibold text-gray-900">
             How it works
           </motion.h2>
-
           <motion.p variants={fadeUp} className="mt-2 text-gray-600">
-            You bring the content. I design it to be readable for recruiters. 
+            You bring the content. We make it look like you mean business.
           </motion.p>
 
-          <div className="mt-7 grid gap-4 md:grid-cols-3">
-            {[
-              {
-                title: "1) Kickoff",
-                desc: "Quick call to get to know you! You send resume + links + any projects so I can customize the website to show off your accomplishments!",
-              },
-              {
-                title: "2) Build",
-                desc: "I design + write + build. You get a live preview to review.",
-              },
-              {
-                title: "3) Launch",
-                desc: "Final polish, mobile check, and custom domain setup.",
-              },
-            ].map((step) => (
+          <div className="mt-10 grid grid-cols-3 divide-x divide-blue-100">
+            {steps.map((step) => (
               <motion.div
-                key={step.title}
+                key={step.n}
                 variants={fadeUp}
-                className="group rounded-2xl border border-blue-100 bg-white/75 p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+                className="px-8 first:pl-0 last:pr-0"
               >
-                <h3 className="font-medium text-gray-900">{step.title}</h3>
-                <p className="mt-2 text-sm text-gray-600">{step.desc}</p>
-                <div className="mt-4 h-1 w-10 rounded-full bg-blue-200 transition group-hover:bg-blue-400" />
+                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-blue-700 text-base font-medium text-white">
+                  {step.n}
+                </div>
+                <p className="mt-4 text-lg font-medium text-gray-900">{step.title}</p>
+                <p className="mt-2 text-sm text-gray-600 leading-relaxed">{step.desc}</p>
               </motion.div>
             ))}
           </div>
         </motion.div>
       </section>
-
       {/* CTA */}
       <section className="mx-auto max-w-6xl px-6 pb-20">
         <motion.div
@@ -205,13 +179,12 @@ export default function HomePage() {
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>
               <h2 className="text-2xl font-semibold text-gray-900">
-                Tulane + University Park  Launch Pricing
+                Ready to get started?
               </h2>
               <p className="mt-2 text-gray-600">
-                Early students get priority turnaround + a discounted first run. Only 3 spots!
+                Spots are limited. Book a free 15-minute consult and we'll figure out exactly what you need.
               </p>
             </div>
-
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/services"
@@ -220,7 +193,7 @@ export default function HomePage() {
                 View pricing
               </Link>
               <a
-                href="mailto:exceleratekas@gmail.com?subject=Excelerate%20Launch%20Client"
+                href="mailto:exceleratekas@gmail.com?subject=Excelerate%20Consult%20Request"
                 className="rounded-xl border border-blue-200 bg-white px-5 py-3 text-sm font-medium text-blue-900 hover:bg-blue-50"
               >
                 Email to book
@@ -238,18 +211,6 @@ function Stat({ value, label }: { value: string; label: string }) {
     <div className="rounded-2xl border border-blue-100 bg-white/75 p-4 shadow-sm">
       <div className="text-xl font-semibold text-gray-900">{value}</div>
       <div className="text-sm text-gray-600">{label}</div>
-    </div>
-  );
-}
-
-function MiniRow({ title, desc }: { title: string; desc: string }) {
-  return (
-    <div className="flex items-start justify-between gap-4 rounded-2xl border border-blue-100 bg-white p-4">
-      <div>
-        <div className="font-medium text-gray-900">{title}</div>
-        <div className="mt-1 text-sm text-gray-600">{desc}</div>
-      </div>
-      <div className="mt-1 h-2 w-2 rounded-full bg-blue-500" />
     </div>
   );
 }

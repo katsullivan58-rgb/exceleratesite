@@ -15,7 +15,7 @@ export function PricingCard({
     <div
       className={
         "rounded-2xl border p-6 shadow-sm " +
-        (popular ? "border-blue" : "border-gray-200")
+        (popular ? "border-black" : "border-gray-200")
       }
     >
       <div className="flex items-start justify-between">
@@ -24,7 +24,7 @@ export function PricingCard({
           <p className="mt-1 text-sm text-gray-600">{description}</p>
         </div>
         {popular && (
-          <span className="rounded-full bg-blue-600 px-3 py-1 text-xs text-white">
+          <span className="rounded-full bg-black px-3 py-1 text-xs text-white">
             Popular
           </span>
         )}
