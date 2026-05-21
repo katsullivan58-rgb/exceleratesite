@@ -111,7 +111,15 @@ export default function About() {
             </motion.p>
 
             <motion.p variants={fadeUp} className="mt-4 text-lg text-gray-600 leading-relaxed">
-              Excelerate was born from identifying gaps while I worked at the LePage Center aka the ntrepreneurship incubator at Tulane. I saw that too many startups were either using a template essentially for websites, yes even with AI, or they would have to pay obscene prices for web developers who often were outsourced overseas and gave them nothing close to what they wanted (it happend multiple times and yes it was stressful). As deadlines were tight I coded several startups websites and wanted to help other startups outside of just Tulane have websites at a low cost that actually do what they need to do. I also saw so many students underselling themselves by only having a one-page resumes and vague AI generated LinkedIn posts. I understand jobs validly want to see real work so I used resume portfolios to fill that gap between applicants and employers. 
+              Excelerate was born from identifying gaps while I worked at the LePage Center aka the entrepreneurship incubator at Tulane. 
+            </motion.p>
+
+            <motion.p variants={fadeUp} className="mt-4 text-lg text-gray-600 leading-relaxed">
+              I saw that too many startups were either using a template essentially for websites, yes even with AI, or they would have to pay obscene prices for web developers who often were outsourced overseas and gave them nothing close to what they wanted (it happend multiple times and yes it was stressful). As deadlines were tight I coded several startups websites and wanted to help other startups outside of just Tulane have websites at a low cost that actually do what they need to do.
+            </motion.p>
+
+            <motion.p variants={fadeUp} className="mt-4 text-lg text-gray-600 leading-relaxed">
+              I also saw so many students underselling themselves by only having a one-page resumes and vague AI generated LinkedIn posts. I understand jobs validly want to see real work so I used resume portfolios to fill that gap between applicants and employers. 
             </motion.p>
 
             <motion.p variants={fadeUp} className="mt-4 text-lg text-gray-600 leading-relaxed">
