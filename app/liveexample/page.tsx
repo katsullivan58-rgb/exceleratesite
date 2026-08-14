@@ -19,7 +19,7 @@ const examples: Example[] = [
     tags: ["Portfolio", "Personal Brand", "Marketing & Design"],
     link: "https://anneheldman.my.canva.site/",
     live: true,
-    // videoSrc: "/videos/anne-site.mp4",
+    videoSrc: "/videos/annie-site.mp4",
   },
   {
     category: "PERSONAL PORTFOLIO",
