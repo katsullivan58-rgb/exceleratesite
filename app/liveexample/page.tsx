@@ -7,6 +7,7 @@ type Example = {
   tags: string[];
   link: string | null;
   live: boolean;
+  videoSrc?: string;
 };
 
 const examples: Example[] = [
@@ -18,6 +19,7 @@ const examples: Example[] = [
     tags: ["Portfolio", "Personal Brand", "Marketing & Design"],
     link: "https://anneheldman.my.canva.site/",
     live: true,
+    // videoSrc: "/videos/anne-site.mp4",
   },
   {
     category: "PERSONAL PORTFOLIO",
@@ -27,6 +29,7 @@ const examples: Example[] = [
     tags: ["Portfolio", "Personal Brand", "Finance & Tech"],
     link: "https://kasullivan.vercel.app/",
     live: true,
+    videoSrc: "/videos/kathryn-site.mp4",
   },
   {
     category: "STARTUP / AI INTEGRATION",
@@ -36,6 +39,7 @@ const examples: Example[] = [
     tags: ["Startup", "AI Integration", "Healthcare", "Live Demo"],
     link: "https://nora-virid-phi.vercel.app/index.html",
     live: true,
+    videoSrc: "/videos/nora-site.mp4",
   },
   {
     category: "STARTUP / AI AGENT",
@@ -47,6 +51,12 @@ const examples: Example[] = [
     live: false,
   },
 ];
+
+const VIDEO_SLOT_TITLES = new Set([
+  "Anne Heldman — Marketing & Design Portfolio",
+  "Kathryn Sullivan — Personal Website",
+  "NORA — Navigating Obstetric Resources & Access",
+]);
 
 export default function ExamplesPage() {
   return (
@@ -116,10 +126,36 @@ export default function ExamplesPage() {
               </div>
 
               {/* Right */}
-              <div className="flex items-center md:col-span-2">
+              <div className="flex flex-col justify-center gap-6 md:col-span-2">
                 <p className="text-base leading-relaxed text-gray-600">
                   {ex.description}
                 </p>
+
+                {VIDEO_SLOT_TITLES.has(ex.title) && (
+                  <div className="flex aspect-video w-full flex-col items-center justify-center gap-2 rounded-2xl border-2 border-dashed border-blue-200 bg-blue-50/50 text-blue-700">
+                    {ex.videoSrc ? (
+                      <video
+                        src={ex.videoSrc}
+                        controls
+                        className="h-full w-full rounded-2xl object-cover"
+                      />
+                    ) : (
+                      <>
+                        <svg
+                          width="36"
+                          height="36"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          aria-hidden="true"
+                        >
+                          <circle cx="12" cy="12" r="11" stroke="currentColor" strokeWidth="1.5" />
+                          <path d="M10 8.5v7l6-3.5-6-3.5Z" fill="currentColor" />
+                        </svg>
+                        <span className="text-sm font-medium">Walkthrough video coming soon</span>
+                      </>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           ))}

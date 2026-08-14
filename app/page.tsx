@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
+import { LaptopScrollHero } from "@/components/LaptopScrollHero";
+import DepthText from "@/components/DepthText";
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -50,60 +52,74 @@ const steps = [
 export default function HomePage() {
   return (
     <main className="relative min-h-screen bg-white">
-      {/* background glow */}
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute left-1/2 top-[-120px] h-[420px] w-[860px] -translate-x-1/2 rounded-full bg-primary/30 blur-3xl" />
-        <div className="absolute right-[-240px] top-[240px] h-[420px] w-[420px] rounded-full bg-primaryDark/20 blur-3xl" />
-        <div className="absolute left-[-220px] top-[620px] h-[420px] w-[420px] rounded-full bg-primary/25 blur-3xl" />
+      <div className="relative">
+        {/* background glow */}
+        <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+          <div className="absolute left-1/2 top-[-120px] h-[420px] w-[860px] -translate-x-1/2 rounded-full bg-primary/30 blur-3xl" />
+          <div className="absolute right-[-240px] top-[240px] h-[420px] w-[420px] rounded-full bg-primaryDark/20 blur-3xl" />
+        </div>
+
+        <LaptopScrollHero />
+
+        {/* HERO */}
+        <section className="relative mx-auto max-w-4xl px-6 pt-4 pb-5 sm:pt-6 text-center">
+          <motion.div variants={container} initial="hidden" animate="show">
+            <motion.div variants={fadeUp} className="flex justify-center">
+              <h1>
+                <DepthText
+                  text="Excelerate"
+                  layers={34}
+                  depth={2.4}
+                  faceColor="#1d4ed8"
+                  depthColor="#1e3a8a"
+                  tilt={5}
+                  pointerTracking
+                  smoothing={0.14}
+                  perspective={900}
+                  autoOrbit
+                  orbitSpeed={0.35}
+                  fontSize="clamp(3rem, 12vw, 7rem)"
+                  fontWeight={800}
+                  shadow
+                />
+              </h1>
+            </motion.div>
+
+            <motion.p variants={fadeUp} className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+              Excelerate builds clean, fast, custom websites for startups, small businesses, and professionals without the agency price tag or the month-long wait.
+              <br />
+              <span className="font-medium text-gray-900">Simple. Scalable. Built to grow.</span>
+            </motion.p>
+
+            <motion.div variants={fadeUp} className="mt-9 flex flex-wrap justify-center gap-3">
+              <Link
+                href="/services"
+                className="rounded-xl bg-blue-700 px-5 py-3 text-sm font-medium text-white shadow-sm hover:bg-blue-800 active:scale-[0.99]"
+              >
+                See packages
+              </Link>
+              <a
+                href="mailto:exceleratekas@gmail.com?subject=Excelerate%20Consult%20Request"
+                className="rounded-xl border border-blue-200 bg-white px-5 py-3 text-sm font-medium text-blue-900 hover:bg-blue-50 active:scale-[0.99]"
+              >
+                Book a free consult
+              </a>
+              <a
+                href="#what-we-build"
+                className="rounded-xl border border-transparent bg-transparent px-5 py-3 text-sm font-medium text-gray-600 hover:text-gray-900"
+              >
+                How it works →
+              </a>
+            </motion.div>
+
+            <motion.div variants={fadeUp} className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-3 max-w-2xl mx-auto">
+              <Stat value="3–7 days" label="typical turnaround" />
+              <Stat value="Custom" label="design every time" />
+              <Stat value="One link" label="your whole brand" />
+            </motion.div>
+          </motion.div>
+        </section>
       </div>
-
-      {/* HERO */}
-      <section className="mx-auto max-w-4xl px-6 pt-14 pb-5 sm:pt-20 text-center">
-        <motion.div variants={container} initial="hidden" animate="show">
-          <motion.div variants={fadeUp} className="inline-flex items-center gap-2 rounded-full border border-blue-800 bg-white/70 px-3 py-1 text-xs text-blue-800 shadow-sm">
-            <span className="h-2 w-2 rounded-full bg-blue-500" />
-            Now open to all clients
-          </motion.div>
-
-          <motion.h1 variants={fadeUp} className="mt-6 text-4xl font-semibold tracking-tight text-gray-900 sm:text-6xl">
-            Your business deserves a{" "}
-            <span className="text-blue-700">website that works.</span>
-          </motion.h1>
-
-          <motion.p variants={fadeUp} className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-            Excelerate builds clean, fast, custom websites for startups, small businesses, and professionals without the agency price tag or the month-long wait.
-            <br />
-            <span className="font-medium text-gray-900">Simple. Scalable. Built to grow.</span>
-          </motion.p>
-
-          <motion.div variants={fadeUp} className="mt-9 flex flex-wrap justify-center gap-3">
-            <Link
-              href="/services"
-              className="rounded-xl bg-blue-700 px-5 py-3 text-sm font-medium text-white shadow-sm hover:bg-blue-800 active:scale-[0.99]"
-            >
-              See packages
-            </Link>
-            <a
-              href="mailto:exceleratekas@gmail.com?subject=Excelerate%20Consult%20Request"
-              className="rounded-xl border border-blue-200 bg-white px-5 py-3 text-sm font-medium text-blue-900 hover:bg-blue-50 active:scale-[0.99]"
-            >
-              Book a free consult
-            </a>
-            <a
-              href="#what-we-build"
-              className="rounded-xl border border-transparent bg-transparent px-5 py-3 text-sm font-medium text-gray-600 hover:text-gray-900"
-            >
-              How it works →
-            </a>
-          </motion.div>
-
-          <motion.div variants={fadeUp} className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-3 max-w-2xl mx-auto">
-            <Stat value="3–7 days" label="typical turnaround" />
-            <Stat value="Custom" label="design every time" />
-            <Stat value="One link" label="your whole brand" />
-          </motion.div>
-        </motion.div>
-      </section>
 
       {/* WHAT WE BUILD */}
       <section id="what-we-build" className="mx-auto max-w-6xl px-2 pt-10 pb-6">

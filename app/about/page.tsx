@@ -1,8 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
+import ProfileCard from "@/components/ProfileCard";
+
+const EMAIL = "exceleratekas@gmail.com";
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -83,16 +85,19 @@ export default function About() {
         >
           {/* Photo */}
           <motion.div variants={fadeUp} className="flex justify-center">
-            <div className="h-80 w-80 overflow-hidden rounded-full border-2 border-blue-100 bg-white shadow-sm flex-shrink-0">
-              <Image
-                src="/kat_headshot.png"
-                alt="Kathryn Sullivan, founder of Excelerate"
-                width={160}
-                height={160}
-                className="h-full w-full object-cover object-top"
-                priority
-              />
-            </div>
+            <ProfileCard
+              name="Kathryn Sullivan"
+              contactText="Get in touch"
+              avatarUrl="/kat_headshot.png"
+              showContact
+              enableTilt
+              enableMobileTilt={false}
+              onContactClick={() => (window.location.href = `mailto:${EMAIL}`)}
+              behindGlowEnabled
+              behindGlowColor="rgba(125, 190, 255, 0.18)"
+              behindGlowSize="40%"
+              innerGradient="linear-gradient(145deg,#1d4ed814 0%,#71C4FF10 100%)"
+            />
           </motion.div>
 
           {/* Text */}
@@ -208,15 +213,19 @@ export default function About() {
 
           {/* Photo */}
           <motion.div variants={fadeUp} className="flex justify-center">
-            <div className="h-80 w-80 overflow-hidden rounded-full border-2 border-blue-100 bg-white shadow-sm flex-shrink-0">
-              <Image
-                src="/anne_headshot.png"
-                alt="Anne Heldman, Lead Designer at Excelerate"
-                width={160}
-                height={160}
-                className="h-full w-full object-cover object-top"
-              />
-            </div>
+            <ProfileCard
+              name="Anne Heldman"
+              contactText="Get in touch"
+              avatarUrl="/anne_headshot.png"
+              showContact
+              enableTilt
+              enableMobileTilt={false}
+              onContactClick={() => (window.location.href = `mailto:${EMAIL}`)}
+              behindGlowEnabled
+              behindGlowColor="rgba(125, 190, 255, 0.18)"
+              behindGlowSize="40%"
+              innerGradient="linear-gradient(145deg,#60496e14 0%,#71C4FF10 100%)"
+            />
           </motion.div>
         </motion.div>
 

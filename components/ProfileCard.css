@@ -1,0 +1,351 @@
+.pc-card-wrapper {
+  --pc-pointer-x: 50%;
+  --pc-pointer-y: 50%;
+  --pc-pointer-from-center: 0;
+  --pc-pointer-from-top: 0.5;
+  --pc-pointer-from-left: 0.5;
+  --pc-card-opacity: 0;
+  --pc-rotate-x: 0deg;
+  --pc-rotate-y: 0deg;
+  --pc-background-x: 50%;
+  --pc-background-y: 50%;
+  --pc-grain: none;
+  --pc-icon: none;
+  --pc-behind-glow-color: rgba(125, 190, 255, 0.67);
+  --pc-behind-glow-size: 25%;
+  --pc-inner-gradient: none;
+  --pc-sunpillar-1: hsl(2, 100%, 73%);
+  --pc-sunpillar-2: hsl(53, 100%, 69%);
+  --pc-sunpillar-3: hsl(93, 100%, 69%);
+  --pc-sunpillar-4: hsl(176, 100%, 76%);
+  --pc-sunpillar-5: hsl(228, 100%, 74%);
+  --pc-sunpillar-6: hsl(283, 100%, 73%);
+  --pc-card-radius: 30px;
+
+  perspective: 500px;
+  transform: translate3d(0, 0, 0.1px);
+  position: relative;
+  touch-action: none;
+}
+
+.pc-behind {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at var(--pc-pointer-x) var(--pc-pointer-y),
+    var(--pc-behind-glow-color) 0%,
+    transparent var(--pc-behind-glow-size)
+  );
+  filter: blur(50px) saturate(1.1);
+  opacity: calc(0.8 * var(--pc-card-opacity));
+  transition: opacity 200ms ease;
+}
+
+.pc-card-wrapper:hover,
+.pc-card-wrapper.active {
+  --pc-card-opacity: 1;
+}
+
+.pc-card {
+  height: 80svh;
+  max-height: 540px;
+  display: grid;
+  aspect-ratio: 0.718;
+  border-radius: var(--pc-card-radius);
+  position: relative;
+  background-blend-mode: color-dodge, normal, normal, normal;
+  box-shadow: rgba(0, 0, 0, 0.8) calc((var(--pc-pointer-from-left) * 10px) - 3px)
+    calc((var(--pc-pointer-from-top) * 20px) - 6px) 20px -5px;
+  transition: transform 1s ease;
+  transform: translateZ(0) rotateX(0deg) rotateY(0deg);
+  background: rgba(0, 0, 0, 0.9);
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.pc-card:hover,
+.pc-card.active {
+  transition: none;
+  transform: translateZ(0) rotateX(var(--pc-rotate-y)) rotateY(var(--pc-rotate-x));
+}
+
+.pc-card-shell.entering .pc-card {
+  transition: transform 180ms ease-out;
+}
+
+.pc-card-shell {
+  position: relative;
+  z-index: 1;
+}
+
+.pc-card * {
+  display: grid;
+  grid-area: 1/-1;
+  border-radius: var(--pc-card-radius);
+  pointer-events: none;
+}
+
+.pc-inside {
+  inset: 0;
+  position: absolute;
+  background-image: var(--pc-inner-gradient);
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: none;
+}
+
+.pc-shine {
+  mask-image: var(--pc-icon);
+  mask-mode: luminance;
+  mask-repeat: repeat;
+  mask-size: 150%;
+  mask-position: top calc(200% - (var(--pc-background-y) * 5)) left calc(100% - var(--pc-background-x));
+  transition: filter 0.8s ease;
+  filter: brightness(0.66) contrast(1.33) saturate(0.33) opacity(0.5);
+  animation: pc-holo-bg 18s linear infinite;
+  animation-play-state: running;
+  mix-blend-mode: color-dodge;
+}
+
+.pc-shine,
+.pc-shine::after {
+  --pc-space: 5%;
+  --pc-angle: -45deg;
+  transform: translate3d(0, 0, 1px);
+  overflow: hidden;
+  z-index: 3;
+  background: transparent;
+  background-size: cover;
+  background-position: center;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      var(--pc-sunpillar-1) calc(var(--pc-space) * 1),
+      var(--pc-sunpillar-2) calc(var(--pc-space) * 2),
+      var(--pc-sunpillar-3) calc(var(--pc-space) * 3),
+      var(--pc-sunpillar-4) calc(var(--pc-space) * 4),
+      var(--pc-sunpillar-5) calc(var(--pc-space) * 5),
+      var(--pc-sunpillar-6) calc(var(--pc-space) * 6),
+      var(--pc-sunpillar-1) calc(var(--pc-space) * 7)
+    ),
+    repeating-linear-gradient(
+      var(--pc-angle),
+      #0e152e 0%,
+      hsl(180, 10%, 60%) 3.8%,
+      hsl(180, 29%, 66%) 4.5%,
+      hsl(180, 10%, 60%) 5.2%,
+      #0e152e 10%,
+      #0e152e 12%
+    ),
+    radial-gradient(
+      farthest-corner circle at var(--pc-pointer-x) var(--pc-pointer-y),
+      hsla(0, 0%, 0%, 0.1) 12%,
+      hsla(0, 0%, 0%, 0.15) 20%,
+      hsla(0, 0%, 0%, 0.25) 120%
+    );
+  background-position:
+    0 var(--pc-background-y),
+    var(--pc-background-x) var(--pc-background-y),
+    center;
+  background-blend-mode: color, hard-light;
+  background-size:
+    500% 500%,
+    300% 300%,
+    200% 200%;
+  background-repeat: repeat;
+}
+
+.pc-shine::before,
+.pc-shine::after {
+  content: "";
+  background-position: center;
+  background-size: cover;
+  grid-area: 1/1;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.pc-card:hover .pc-shine,
+.pc-card.active .pc-shine {
+  filter: brightness(0.85) contrast(1.5) saturate(0.5);
+  animation-play-state: paused;
+}
+
+.pc-card:hover .pc-shine::before,
+.pc-card.active .pc-shine::before,
+.pc-card:hover .pc-shine::after,
+.pc-card.active .pc-shine::after {
+  opacity: 1;
+}
+
+.pc-shine::before {
+  background-image:
+    linear-gradient(
+      45deg,
+      var(--pc-sunpillar-4),
+      var(--pc-sunpillar-5),
+      var(--pc-sunpillar-6),
+      var(--pc-sunpillar-1),
+      var(--pc-sunpillar-2),
+      var(--pc-sunpillar-3)
+    ),
+    radial-gradient(circle at var(--pc-pointer-x) var(--pc-pointer-y), hsl(0, 0%, 70%) 0%, hsla(0, 0%, 30%, 0.2) 90%),
+    var(--pc-grain);
+  background-size:
+    250% 250%,
+    100% 100%,
+    220px 220px;
+  background-position:
+    var(--pc-pointer-x) var(--pc-pointer-y),
+    center,
+    calc(var(--pc-pointer-x) * 0.01) calc(var(--pc-pointer-y) * 0.01);
+  background-blend-mode: color-dodge;
+  filter: brightness(calc(2 - var(--pc-pointer-from-center))) contrast(calc(var(--pc-pointer-from-center) + 2))
+    saturate(calc(0.5 + var(--pc-pointer-from-center)));
+  mix-blend-mode: luminosity;
+}
+
+.pc-shine::after {
+  background-position:
+    0 var(--pc-background-y),
+    calc(var(--pc-background-x) * 0.4) calc(var(--pc-background-y) * 0.5),
+    center;
+  background-size:
+    200% 300%,
+    700% 700%,
+    100% 100%;
+  mix-blend-mode: difference;
+  filter: brightness(0.8) contrast(1.5);
+}
+
+.pc-glare {
+  transform: translate3d(0, 0, 1.1px);
+  overflow: hidden;
+  background-image: radial-gradient(
+    farthest-corner circle at var(--pc-pointer-x) var(--pc-pointer-y),
+    hsl(248, 25%, 80%) 12%,
+    hsla(207, 40%, 30%, 0.8) 90%
+  );
+  mix-blend-mode: overlay;
+  filter: brightness(0.8) contrast(1.2);
+  z-index: 4;
+}
+
+.pc-avatar-content {
+  mix-blend-mode: luminosity;
+  overflow: visible;
+  transform: translateZ(2px);
+  backface-visibility: hidden;
+}
+
+.pc-avatar-content .pc-avatar {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform-origin: 50% 100%;
+  transform: translateX(calc(-50% + (var(--pc-pointer-from-left) - 0.5) * 6px)) translateZ(0)
+    scaleY(calc(1 + (var(--pc-pointer-from-top) - 0.5) * 0.02)) scaleX(calc(1 + (var(--pc-pointer-from-left) - 0.5) * 0.01));
+  backface-visibility: hidden;
+  will-change: transform;
+  transition: transform 120ms ease-out;
+  object-fit: cover;
+  object-position: top;
+}
+
+.pc-user-info {
+  position: absolute;
+  --pc-ui-inset: 20px;
+  --pc-ui-radius-bias: 6px;
+  bottom: var(--pc-ui-inset);
+  left: var(--pc-ui-inset);
+  right: var(--pc-ui-inset);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  pointer-events: auto;
+}
+
+.pc-contact-btn {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+  background: transparent;
+}
+
+.pc-contact-btn:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+@keyframes pc-holo-bg {
+  0% {
+    background-position:
+      0 var(--pc-background-y),
+      0 0,
+      center;
+  }
+
+  100% {
+    background-position:
+      0 var(--pc-background-y),
+      90% 90%,
+      center;
+  }
+}
+
+@media (max-width: 768px) {
+  .pc-card {
+    height: 70svh;
+    max-height: 450px;
+  }
+
+  .pc-user-info {
+    --pc-ui-inset: 15px;
+  }
+
+  .pc-contact-btn {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pc-card {
+    height: 60svh;
+    max-height: 380px;
+  }
+
+  .pc-user-info {
+    --pc-ui-inset: 12px;
+  }
+
+  .pc-contact-btn {
+    padding: 5px 10px;
+    font-size: 10px;
+    border-radius: 50px;
+  }
+}
+
+@media (max-width: 320px) {
+  .pc-card {
+    height: 55svh;
+    max-height: 320px;
+  }
+
+  .pc-contact-btn {
+    padding: 4px 8px;
+    font-size: 9px;
+    border-radius: 50px;
+  }
+}
